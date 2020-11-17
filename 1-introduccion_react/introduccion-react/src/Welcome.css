@@ -1,0 +1,22 @@
+.Welcome {
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #282c34;
+  margin-top: 40px;
+  color: white;
+  font-size: calc(10px + 2vmin);
+}
+
+.Avatar {
+  height: 100px;
+  pointer-events: none;
+}
+
+.UserInfo-name {
+  color: #61dafb;
+  cursor: pointer;
+}
