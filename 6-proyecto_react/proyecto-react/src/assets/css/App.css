@@ -7,9 +7,9 @@
 
 /* general */
 body {
-  text-align: center;
   margin: 0px;
   padding: 0px;
+
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -17,9 +17,15 @@ body {
   -moz-osx-font-smoothing: antialiased;
 }
 
+ol,
+ul,
+dl {
+  margin-top: revert !important;
+}
+
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: transparent;
 }
 
@@ -83,6 +89,78 @@ textarea {
 .clearfix {
   clear: both;
   float: none;
+}
+
+/** Contacto */
+
+.form-contact label {
+  font-size: 14px;
+}
+
+.form-contact .form-group {
+  margin-bottom: 30px;
+}
+
+.form-contact .form-control {
+  border: 1px solid #e5e6e9;
+  border-radius: 0px;
+  height: 48px;
+  padding-left: 18px;
+  font-size: 13px;
+  background: transparent;
+}
+
+.form-contact .form-control:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.form-contact .form-control::placeholder {
+  font-weight: 300;
+  color: #999999;
+}
+
+.form-contact textarea {
+  border-radius: 0px;
+  height: 100% !important;
+}
+
+.button {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.button:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+.boxed-btn {
+  background: #fff;
+  color: #61dafb;
+  display: inline-block;
+  padding: 18px 44px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  border: 0;
+  border: 1px solid #61dafb;
+  letter-spacing: 3px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.boxed-btn:hover {
+  background: #61dafb;
+  color: #fff;
+  border: 1px solid #61dafb;
+}
+
+.boxed-btn:focus {
+  outline: none;
 }
 
 #logo {
@@ -152,6 +230,10 @@ textarea {
   color: #61dafb;
 }
 
+#menu a.active {
+  border-bottom: 3px solid #4dc8eb;
+}
+
 /* slider */
 #slider {
   background-color: #282c34;
@@ -161,6 +243,7 @@ textarea {
   padding-bottom: 85px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 .title-lg {
@@ -229,6 +312,13 @@ textarea {
   height: 100px;
 }
 
+#content-contact {
+  width: 70%;
+  float: left;
+  min-height: 650px;
+  margin-right: 20px;
+}
+
 #content-article {
   width: 70%;
   float: left;
@@ -238,13 +328,16 @@ textarea {
 
 .subheader {
   font-size: 2em;
+  font-weight: 900;
   border-bottom: 1px solid #eee;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
 #sidebar {
   width: 25%;
   float: left;
+  text-align: center;
   border: 1px solid rgb(236, 236, 236);
   background-color: #f3f3f3;
 }
@@ -258,6 +351,7 @@ textarea {
 .sidebar-item h3 {
   text-transform: uppercase;
   font-size: 18px;
+  font-weight: 700;
   margin: 0px;
   padding-bottom: 10px;
   margin-bottom: 10px;
@@ -290,15 +384,6 @@ textarea {
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 18px;
-}
-
-.fila {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
 }
 
 .search-section {
@@ -363,11 +448,12 @@ textarea {
   object-fit: cover;
 }
 
-.article-item h2 {
+.article-item h4 {
   display: block;
   width: 100%;
   margin: 0px;
   padding: 0px;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
@@ -375,6 +461,11 @@ textarea {
   display: block;
   width: 100%;
   color: rgb(122, 122, 122);
+}
+
+.article-item .description-article {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .article-item a {
@@ -409,6 +500,23 @@ textarea {
 
 .article-item p {
   text-align: justify;
+}
+
+/** PAGE NOT FOUND 404 */
+.error-box {
+  height: 100%;
+  width: 100%;
+}
+
+.error-body {
+  padding-top: 10%;
+}
+
+.error-body h1 {
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 4px 4px 0 #fff, 6px 6px 0 #263238;
+  line-height: 100px;
 }
 
 /* footer */
@@ -459,12 +567,18 @@ textarea {
     clear: both;
     float: none;
     width: 100%;
+    text-align: center;
     margin: 0px;
     padding: 0px;
     line-height: 43px;
   }
 
   #content {
+    float: none;
+    width: 100%;
+  }
+
+  #content-contact {
     float: none;
     width: 100%;
   }

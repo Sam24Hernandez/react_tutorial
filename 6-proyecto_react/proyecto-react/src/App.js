@@ -1,22 +1,11 @@
 import "./assets/css/App.css";
-
-// Importar Componentes
-import Header from "./components/Header";
-import Slider from "./components/Slider";
-import Sidebar from "./components/Sidebar";
-import Footer from "./components/Footer";
+// Importar Router
+import Router from "./Router";
 
 function App() {
   return (
     <div className="App">
-      {/** HEADER */}
-      <Header />
-      {/** SLIDER */}
-      <Slider />
-      {/** SIDEBAR */}
-      <Sidebar />
-      {/** FOOTER */}
-      <Footer />
+      <Router />
     </div>
   );
 }

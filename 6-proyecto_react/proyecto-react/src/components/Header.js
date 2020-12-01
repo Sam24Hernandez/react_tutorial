@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/img/logo/logo.svg";
+import { NavLink } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
@@ -10,7 +11,6 @@ class Header extends React.Component {
           <div id="logo">
             <img src={logo} alt="Logotipo" className="app-logo" />
             <span id="brand">
-              {" "}
               <strong>React</strong>Web
             </span>
           </div>
@@ -18,16 +18,24 @@ class Header extends React.Component {
           <nav id="menu">
             <ul>
               <li>
-                <a href="index.html">Inicio</a>
+                <NavLink to="/home" activeClassName="active">
+                  Inicio
+                </NavLink>
               </li>
               <li>
-                <a href="form.html">Acerca</a>
+                <NavLink to="/acerca" activeClassName="active">
+                  Acerca
+                </NavLink>
               </li>
               <li>
-                <a href="blog.html">Blog</a>
+                <NavLink to="/blog" activeClassName="active">
+                  Blog
+                </NavLink>
               </li>
               <li>
-                <a href="contacto.html">Contacto</a>
+                <NavLink to="/contacto" activeClassName="active">
+                  Contacto
+                </NavLink>
               </li>
             </ul>
           </nav>
