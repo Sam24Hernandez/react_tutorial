@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Blog from "./components/Blog";
 import Contacto from "./components/Contacto";
+import Search from "./components/Search";
+import Acerca from "./components/Acerca";
 /** Componente 404 Page Not Found */
 import PageNotFound from "./components/PageNotFound";
 
@@ -25,6 +27,8 @@ class Router extends React.Component {
           <Route exact path="/home" component={Home} />
           <Route exact path="/blog" component={Blog} />
           <Route exact path="/contacto" component={Contacto} />
+          <Route exact path="/buscador" component={Search} />
+          <Route exact path="/acerca" component={Acerca} />
           {/** Página no encontrada 404 */}
           <Route component={PageNotFound} />
         </Switch>

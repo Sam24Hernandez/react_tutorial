@@ -2,22 +2,17 @@ import React from "react";
 import Slider from "./Slider";
 import Sidebar from "./Sidebar";
 
-class Home extends React.Component {
-
+class Search extends React.Component {
   render() {
     return (
-      <div>
-        <Slider
-          title="React"
-          description="Una biblioteca de JavaScript para construir interfaces de usuario"
-          btn="Comenzar"
-          link="Visita su página"
-          size="slider-lg"
-        />
+      <div id="search">
+        <Slider title="Buscador" size="slider-sm" />
         <div className="center">
           <section id="content">
-            <h2 className="subheader">Últimos artículos</h2>
-            {/* listado de articulos */}
+            <h2 className="subheader">Busca el artículo</h2>
+
+            <input id="search-box" placeholder="Buscar Artículo..." />
+
             <div id="articles">
               <article className="article-item" id="article-template">
                 <div className="image-wrap">
@@ -26,12 +21,14 @@ class Home extends React.Component {
                     alt="Paisaje"
                   />
                 </div>
-                <h4>Titulo del Artículo</h4>
+                <h4>Titulo del artículo</h4>
                 <span className="description-article">
-                  Breve descripción del artículo...
+                  Contenido breve del articulo...
                 </span>
-                <small className="date-article"> Hace 5 minutos </small>
-                <a href="article.html">
+                <small className="date-article">
+                  Por Sam Hernández | Hace 8 minutos
+                </small>
+                <a href="index.html">
                   Leer más
                   <svg
                     height="12"
@@ -41,10 +38,10 @@ class Home extends React.Component {
                   >
                     <path
                       d="
-                  M.18254,8.697a.18149.18149,0,0,1-.12886-.31034L4.09723,4.34126.05369.29954a.18149.18149,
-                  0,0,1,.2559-.2559L4.4838,4.21785a.18149.18149,0,0,1,0,.2559L.30958,8.648A.18149.18149,
-                  0,0,1,.18254,8.697Z
-                "
+                    M.18254,8.697a.18149.18149,0,0,1-.12886-.31034L4.09723,4.34126.05369.29954a.18149.18149,
+                    0,0,1,.2559-.2559L4.4838,4.21785a.18149.18149,0,0,1,0,.2559L.30958,8.648A.18149.18149,
+                    0,0,1,.18254,8.697Z
+                  "
                       fill="currentColor"
                     ></path>
                   </svg>
@@ -53,7 +50,7 @@ class Home extends React.Component {
               </article>
             </div>
           </section>
-          {/** SIDEBAR */}
+
           <Sidebar />
         </div>
       </div>
@@ -61,4 +58,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default Search;

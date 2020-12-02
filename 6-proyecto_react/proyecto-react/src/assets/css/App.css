@@ -319,6 +319,13 @@ textarea {
   margin-right: 20px;
 }
 
+#content-page {
+  width: 100%;
+  float: left;
+  min-height: 650px;
+  margin-right: 20px;
+}
+
 #content-article {
   width: 70%;
   float: left;
@@ -384,6 +391,26 @@ textarea {
   margin-top: 10px;
   margin-bottom: 5px;
   font-size: 18px;
+}
+
+#search-box {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 1px solid #dfe1e5;
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+  border-color: rgba(233, 225, 229, 0);
+  background-color: transparent;
+  margin: 0 auto;
+  height: 56px;
+  border-radius: 24px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  word-wrap: break-word;
+  font-weight: 400;
+  padding: 5px 8px 0 16px;
+  font-family: inherit;
+  transition: all 0.15s ease;
 }
 
 .search-section {
@@ -579,6 +606,11 @@ textarea {
   }
 
   #content-contact {
+    float: none;
+    width: 100%;
+  }
+
+  #content-page {
     float: none;
     width: 100%;
   }
